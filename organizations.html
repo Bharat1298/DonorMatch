@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" src = "styles.css">
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <title>Document</title>
+</head>
+
+<style>
+    @import url("styles.css");
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap');
+
+    /*Product Section */
+
+* {
+    box-sizing: border-box;
+}
+
+*, *::after , *::before {
+    box-sizing: border-box;
+}
+
+html,body {
+    height: 100%;
+}
+
+
+.org_black_section {
+    background-color: #FFFDD0;
+}
+
+.org_section {
+    margin-bottom: 34px;
+}
+
+.org_black_section .org_tab_button ul.nav {
+    border: 2px solid #2d2d2d;
+}
+
+.org_black_section .org_tab_button ul.nav::before {
+    background-image: linear-gradient(to right, transparent, #2d2d2d);
+}
+
+.org_black_section .org_tab_button ul.nav::after {
+    background-image: linear-gradient(to right, #2d2d2d, transparent);
+}
+
+.org_black_section .org_tab_button ul.nav li:first-child a {
+    border-left: 0;
+}
+
+.org_black_section .org_tab_button ul.nav li a {
+    border-left: 2px solid #2d2d2d;
+    color: #ffffff;
+    font-family: "Baloo 2", serif;
+}
+
+.org_black_section .org_tab_button ul.nav li a:hover {
+    color: #a8741a;
+}
+
+.org_black_section .org_tab_button ul.nav li a.active {
+    color: black;
+}
+
+.org_black_section .org_tab_button ul.nav li a.active::before {
+    border: 0px solid black;
+}
+
+.org_tab_button {
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+.org_tab_button ul {
+   justify-content: center;
+    margin: 0 auto;
+    border: 0px solid #ebebeb;
+}
+
+.org_tab_button ul.nav {
+    display: inline-block;
+    position: relative;
+    border: 2px solid #2d2d2d;
+}
+
+.org_tab_button ul.nav::before {
+    content: "";
+    width: 200px;
+    height: 2px;
+    position: absolute;
+    right: 100%;
+    top: 50%;
+    background-image: linear-gradient(to right, transparent, #2d2d2d);
+}
+
+.org_tab_button ul.nav::after {
+    content: "";
+    width: 200px;
+    height: 2px;
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    background-image: linear-gradient(to right, transparent, #2d2d2d);
+}
+
+.org_tab_button ul li {
+    display: inline-block;
+}
+
+.org_tab_button ul li:first-child a {
+    border-left: 0;
+}
+
+.org_tab_button ul li a {
+    font-size: 20px;
+    color: #242424;
+    line-height: 48px;
+    text-transform: capitalize;
+    font-weight: 700;
+    display: inline-block;
+    font-family: "Baloo 2", serif;
+    border-left: 1px solid #ebebeb;
+    padding: 0 30px;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+.org_tab_button ul li a:hover {
+    color: #a8741a;
+}
+
+.org_tab_button ul li a.active {
+    color: #a8741a;
+    position: relative;
+}
+
+.org_tab_button ul li a.active::before {
+    position: absolute;
+    content: "";
+    width: 104%;
+    height: 109%;
+    border: 2px solid #a8741a;
+    left: -2px;
+    top: -2px;
+    border-radius: 2px;
+}
+
+.tab-content {
+    padding-top: 20px;
+}
+
+.tab-content > .tab-pane.active {
+    display: block;
+    height: auto;
+    opacity: 1;
+    overflow: visible;   
+}
+
+.tab-content > .tab-pane {
+    display: block;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+}
+
+.org_container .custom-col-5  {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding: 0 6px;
+}
+
+.custom-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -6px;
+    margin-right: -6px;
+}
+
+.org_product {
+    display: inline-block;
+    transition: 0.3s;
+    margin-bottom: 30px;
+}
+
+.org_thumb, .org_product {
+    display: inline-block;
+}
+
+.org_product:hover {
+    background: #ffffff;
+    border-radius: 3px;
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.3);
+}
+
+.org_product:hover .product_hover {
+    top: 66%;
+    opacity: 1;
+    visibility: visible;
+}
+
+.org_product:hover .org_thumb a.secondary_img {
+    opacity: 1;
+    visibility: visible;
+}
+
+.org_black_section .org_product {
+    padding: 15px 17px;
+}
+
+.org_black_section .org_product:hover {
+    background: #242424;
+}
+
+.org_thumb {
+    position: relative;
+    margin-bottom: 8px;
+}
+
+img {
+    width: 350px;
+}
+
+.org_thumb a.secondary_img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.product_content {
+    text-align: center;
+    position: relative;
+}
+
+.product_content h3 {
+    line-height: 22px;
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: capitalize;
+    position: relative;
+    padding-bottom: 15px;
+    margin-bottom: 13px;
+}
+
+.product_content h3::before {
+    background-image: linear-gradient(to right, transparent, #2d2d2d 30%, 85%, transparent);
+    content: "";
+    display: block;
+    height: 1px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.product_content h3 a {
+    color: #FFFDD0;
+}
+
+.product_content h3 a:hover {
+    color: red;
+}
+
+.org_black_section .product_content h3 {
+    font-family: "Poppins", 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 400; 
+}
+
+.tag_cate {
+    margin-bottom: 10px;
+}
+
+.org_black_section .tag_cate a{
+    color: #a0a0a0;
+    font-size: 18px;
+}
+
+.org_black_section .tag_cate a:hover {
+    color: red;
+}
+
+.needed_box > span {
+    font-size: 16px;
+    font-weight: 500;
+    color: #FFFDD0;
+}
+
+.needed_box :hover {
+    color: red;
+    cursor: pointer;
+}
+
+.product_hover {
+    position: absolute;
+    top: 50%;
+    z-index: 9;
+    left: 0;
+    background: #fff;
+    padding: 3px 8px 20px 8px;
+    box-shadow: 0px 6px 7px 0 rgba(0, 0, 0, 0.3);
+    transition: all 300ms ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.org_product:hover .product_hover {
+    top: 66%;
+    opacity: 1;
+    visibility: visible;
+}
+
+.org_black_section .product_hover {
+    background: #242424;
+    left: -17px;
+    width: 117%;
+}
+
+.product_desc {
+    margin-bottom: 15px;
+    position: relative;
+    padding-bottom: 14px;
+}
+
+.product_desc::before {
+    background-image: linear-gradient(to right, transparent, #2d2d2d 30%, 85%, transparent);
+    content: "";
+    display: block;
+    height: 1px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.product_desc p {
+    font-size: 13px;
+    line-height: 18px;
+    color: #a0a0a0;
+}
+
+.org_container button {
+    display: none !important;
+}
+
+.org_section1 .slick-list {
+    padding-bottom: 135px !important;
+    margin-bottom: -135px;
+    z-index: 9;
+    padding-top: 18px !important;
+    margin-top: -30px;
+    position: relative;
+}
+
+.p_bottom.org_section1 .slick-list {
+    padding-bottom: 120px !important;
+    margin-bottom: -120px;
+}
+
+</style>
+
+
+
+<body>
+    <section class="org_section org_section1 org_black_section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="org_area">
+                        <div class="org_tab_button">
+                            <ul class="nav" role="tablist">
+                                <li>
+                                    <a class="active" data-toggle="tab" role="tab">Organizations</a>
+                                </li>
+                            </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane fade show active" id="featured" role="tabpane1">
+                                <div class="org_container">
+                                    <div class="custom-row product_column3">
+                                        <div class="custom-col-5">
+                                            <div class="org_product">
+                                                <div class="org_thumb">
+                                                    <a href="#" class="primary_img"><img src="images/charity.jpeg" alt="product1"></a>
+                                                    <a href="#" class="secondary_img"><img src="images/charity.jpeg" alt="product1"></a>
+                                                </div>
+                                                <div class="product_content">
+                                                    <div class="tag_cate">
+                                                        <a href="#">Organization 1</a>
+                                                    </div>
+                                                    <h3><a href="#">A Little About Them</a></h3>
+                                                    <div class="needed_box">
+                                                        <span class="list">What They Need</span>
+                                                    </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        <div class="custom-col-5">
+                                            <div class="org_product">
+                                                <div class="org_thumb">
+                                                    <a href="#" class="primary_img"><img src="images/charity.jpeg" alt="product1"></a>
+                                                    <a href="#" class="secondary_img"><img src="images/charity.jpeg" alt="product1"></a>
+                                                </div>
+                                                <div class="product_content">
+                                                    <div class="tag_cate">
+                                                        <a href="#">Organization 2</a>
+                                                    </div>
+                                                    <h3><a href="#">A Little About Them</a></h3>
+                                                    <div class="needed_box">
+                                                        <span class="list">What They Need</span>
+                                                    </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="custom-col-5">
+                                                <div class="org_product">
+                                                    <div class="org_thumb">
+                                                        <a href="#" class="primary_img"><img src="images/charity.jpeg" alt="product1"></a>
+                                                        <a href="#" class="secondary_img"><img src="images/charity.jpeg" alt="product1"></a>
+                                                    </div>
+                                                    <div class="product_content">
+                                                        <div class="tag_cate">
+                                                            <a href="#">Organization 3</a>
+                                                        </div>
+                                                        <h3><a href="#">A Little About Them</a></h3>
+                                                        <div class="needed_box">
+                                                            <span class="list">What They Need</span>
+                                                        </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="custom-col-5">
+                                                    <div class="org_product">
+                                                        <div class="org_thumb">
+                                                            <a href="#" class="primary_img"><img src="images/charity.jpeg" alt="product1"></a>
+                                                            <a href="#" class="secondary_img"><img src="images/charity.jpeg" alt="product1"></a>
+                                                        </div>
+                                                        <div class="product_content">
+                                                            <div class="tag_cate">
+                                                                <a href="#">Organization 4</a>
+                                                            </div>
+                                                            <h3><a href="#">A Little About Them</a></h3>
+                                                            <div class="needed_box">
+                                                                <span class="list">What They Need</span>
+                                                            </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="custom-col-5">
+                                                        <div class="org_product">
+                                                            <div class="org_thumb">
+                                                                <a href="#" class="primary_img"><img src="images/charity.jpeg" alt="product1"></a>
+                                                                <a href="#" class="secondary_img"><img src="images/charity.jpeg" alt="product1"></a>
+                                                            </div>
+                                                            <div class="product_content">
+                                                                <div class="tag_cate">
+                                                                    <a href="#">Organization 5</a>
+                                                                </div>
+                                                                <h3><a href="#">A Little About Them</a></h3>
+                                                                <div class="needed_box">
+                                                                    <span class="list">What They Need</span>
+                                                                </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="custom-col-5">
+                                                            <div class="org_product">
+                                                                <div class="org_thumb">
+                                                                    <a href="#" class="primary_img"><img src="images/charity.jpeg" alt="product1"></a>
+                                                                    <a href="#" class="secondary_img"><img src="images/charity.jpeg" alt="product1"></a>
+                                                                </div>
+                                                                <div class="product_content">
+                                                                    <div class="tag_cate">
+                                                                        <a href="#">Organization 6</a>
+                                                                    </div>
+                                                                    <h3><a href="#">A Little About Them</a></h3>
+                                                                    <div class="needed_box">
+                                                                        <span class="list">What They Need</span>
+                                                                    </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="custom-col-5">
+                                                                <div class="org_product">
+                                                                    <div class="org_thumb">
+                                                                        <a href="#" class="primary_img"><img src="images/charity.jpeg" alt="product1"></a>
+                                                                        <a href="#" class="secondary_img"><img src="images/charity.jpeg" alt="product1"></a>
+                                                                    </div>
+                                                                    <div class="product_content">
+                                                                        <div class="tag_cate">
+                                                                            <a href="#">Organization 7</a>
+                                                                        </div>
+                                                                        <h3><a href="#">A Little About Them</a></h3>
+                                                                        <div class="needed_box">
+                                                                            <span class="list">What They Need</span>
+                                                                        </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="custom-col-5">
+                                                                    <div class="org_product">
+                                                                        <div class="org_thumb">
+                                                                            <a href="#" class="primary_img"><img src="images/charity.jpeg" alt="product1"></a>
+                                                                            <a href="#" class="secondary_img"><img src="images/charity.jpeg" alt="product1"></a>
+                                                                        </div>
+                                                                        <div class="product_content">
+                                                                            <div class="tag_cate">
+                                                                                <a href="#">Organization 8</a>
+                                                                            </div>
+                                                                            <h3><a href="#">A Little About Them</a></h3>
+                                                                            <div class="needed_box">
+                                                                                <span class="list">What They Need</span>
+                                                                            </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="custom-col-5">
+                                                                        <div class="org_product">
+                                                                            <div class="org_thumb">
+                                                                                <a href="#" class="primary_img"><img src="images/charity.jpeg" alt="product1"></a>
+                                                                                <a href="#" class="secondary_img"><img src="images/charity.jpeg" alt="product1"></a>
+                                                                            </div>
+                                                                            <div class="product_content">
+                                                                                <div class="tag_cate">
+                                                                                    <a href="#">Organization 9</a>
+                                                                                </div>
+                                                                                <h3><a href="#">A Little About Them</a></h3>
+                                                                                <div class="needed_box">
+                                                                                    <span class="list">What They Need</span>
+                                                                                </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="custom-col-5">
+                                                                            <div class="org_product">
+                                                                                <div class="org_thumb">
+                                                                                    <a href="#" class="primary_img"><img src="images/charity.jpeg" alt="product1"></a>
+                                                                                    <a href="#" class="secondary_img"><img src="images/charity.jpeg" alt="product1"></a>
+                                                                                </div>
+                                                                                <div class="product_content">
+                                                                                    <div class="tag_cate">
+                                                                                        <a href="#">Organization 10</a>
+                                                                                    </div>
+                                                                                    <h3><a href="#">A Little About Them</a></h3>
+                                                                                    <div class="needed_box">
+                                                                                        <span class="list">What They Need</span>
+                                                                                    </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div class="custom-col-5">
+                                                                                <div class="org_product">
+                                                                                    <div class="org_thumb">
+                                                                                        <a href="#" class="primary_img"><img src="images/charity.jpeg" alt="product1"></a>
+                                                                                        <a href="#" class="secondary_img"><img src="images/charity.jpeg" alt="product1"></a>
+                                                                                    </div>
+                                                                                    <div class="product_content">
+                                                                                        <div class="tag_cate">
+                                                                                            <a href="#">Organization 11</a>
+                                                                                        </div>
+                                                                                        <h3><a href="#">A Little About Them</a></h3>
+                                                                                        <div class="needed_box">
+                                                                                            <span class="list">What They Need</span>
+                                                                                        </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+
+                                                                                <div class="custom-col-5">
+                                                                                    <div class="org_product">
+                                                                                        <div class="org_thumb">
+                                                                                            <a href="#" class="primary_img"><img src="images/charity.jpeg" alt="product1"></a>
+                                                                                            <a href="#" class="secondary_img"><img src="images/charity.jpeg" alt="product1"></a>
+                                                                                        </div>
+                                                                                        <div class="product_content">
+                                                                                            <div class="tag_cate">
+                                                                                                <a href="#">Organization 12</a>
+                                                                                            </div>
+                                                                                            <h3><a href="#">A Little About Them</a></h3>
+                                                                                            <div class="needed_box">
+                                                                                                <span class="list">What They Need</span>
+                                                                                            </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+
+                                        
+                                                                                    <div class="custom-col-5">
+                                                                                        <div class="org_product">
+                                                                                            <div class="org_thumb">
+                                                                                                <a href="#" class="primary_img"><img src="images/charity.jpeg" alt="product1"></a>
+                                                                                                <a href="#" class="secondary_img"><img src="images/charity.jpeg" alt="product1"></a>
+                                                                                            </div>
+                                                                                            <div class="product_content">
+                                                                                                <div class="tag_cate">
+                                                                                                    <a href="#">Organization 13</a>
+                                                                                                </div>
+                                                                                                <h3><a href="#">A Little About Them</a></h3>
+                                                                                                <div class="needed_box">
+                                                                                                    <span class="list">What They Need</span>
+                                                                                                </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+
+                                                                                        <div class="custom-col-5">
+                                                                                            <div class="org_product">
+                                                                                                <div class="org_thumb">
+                                                                                                    <a href="#" class="primary_img"><img src="images/charity.jpeg" alt="product1"></a>
+                                                                                                    <a href="#" class="secondary_img"><img src="images/charity.jpeg" alt="product1"></a>
+                                                                                                </div>
+                                                                                                <div class="product_content">
+                                                                                                    <div class="tag_cate">
+                                                                                                        <a href="#">Organization 14</a>
+                                                                                                    </div>
+                                                                                                    <h3><a href="#">A Little About Them</a></h3>
+                                                                                                    <div class="needed_box">
+                                                                                                        <span class="list">What They Need</span>
+                                                                                                    </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--product section area ends-->
+</body>
+</html>

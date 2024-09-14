@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" src = "styles.css">
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Document</title>
+</head>
+
+<style>
+    @import url("styles.css");
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap');
+
+    html,body {
+    height: 100%;
+    background: #FFFDD0;
+}
+
+body {
+    line-height: 24px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    visibility: visible;
+    font-family: 'Poppins', sans-serif;
+    color: #5a5a5a;
+}
+
+.profile_content h1 {
+    text-align: center;
+    font-size: 48px;
+    color: black;
+}
+
+.heart {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 10%;
+    padding-bottom: 20px;
+}
+
+.firstName_form {
+    text-align: center;
+}
+
+.firstName_form > input {
+    text-align: left;
+}
+
+.lastName_form {
+    text-align: center;
+}
+
+.lastName_form > input {
+    text-align: left;
+}
+
+.recent-donations {
+    padding-top: 50px;
+    text-align: center;
+}
+
+.recent-donations h2 {
+    text-align: center;
+}
+
+.payment-methods {
+    padding-top: 50px;
+    text-align: center;
+}
+
+.payment-methods h2 {
+    text-align: center;
+}
+
+.email-settings {
+    padding-top: 50px;
+}
+
+.email-settings h2 {
+    text-align: center;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+}
+
+.reset-password {
+    padding-top: 50px;
+    text-align: center;
+}
+
+.reset-password p {
+    margin-bottom: 20px;
+}
+
+.modal-title {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+</style>
+
+<body>
+    <div class="profile_area profile_black">
+        <div class="container">
+            <div class="row mt-5">
+                <div class="col-12">
+                    <div class="profile_content">
+                        <h1>My Profile</h1>
+                        <img src = "images/logo.png" alt="logo" class="heart">
+                        <div class="firstName_form">
+                            <form action="" class="footer-firstName">
+                                <input type="name" placeholder="First Name ..." autocapitalize="off" autocomplete="off">
+                                <button>Enter</button>
+                            </form>
+                        </div>
+                        <div class="lastName_form">
+                            <form action="" class="footer-LastName">
+                                <input type="name" placeholder="Last Name ..." autocapitalize="off" autocomplete="off">
+                                <button>Enter</button>
+                            </form>
+                        </div>
+                    </div>
+                    
+                    <div class = "recent-donations">
+                        <h2>Recent Donations</h2>
+                        <p>You currently do not have any recent donations. If you would like to support a 
+                            organization, first find a organization, then select the items you want to donate.
+                            option at checkout.
+                        </p>
+                    </div>
+
+                    <div class = "payment-methods">
+                        <h2>Payment Methods</h2>
+                        <p>You currently do not have a saved payment method. To save a credit card for faster checkout, 
+                            find a project to which you'd like to donate, and at checkout choose "Remember this card"
+                            below your payment information.
+                        </p>
+                    </div>  
+
+                    <div class = "email-settings">
+                        <h2>Email Settings</h2>
+                        <div class = "btn-container">
+                            <button type = "click" data-toggle="modal" data-target="#myModal">Edit Email Preferences</button>
+                            <div id="myModal" class="modal fade" role="dialog">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                          <h4 class="modal-title">Email Preferences</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <input type="checkbox" id="checkbox" name="checkbox" value="1">
+                                            <label for="checkbox"> I want to recieve daily updates!</label><br>
+                                        </div>
+                                        <div class="modal-footer">
+                                          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                        </div>
+                                      </div>
+                                </div>
+                            </div>
+                            <button type = "click" data-toggle="modal" data-target="#uno">Unsubscribe</button>
+                            <div id="uno" class="modal fade" role="dialog">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                          <h4 class="modal-title">Subscription</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p> Thank you for being part of our community!</p>
+                                        </div>
+                                        <div class="modal-footer">
+                                          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                        </div>
+                                      </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>  
+
+                    <div class = "reset-password">
+                        <h2>Reset Password</h2>
+                        <p>To change your password below, simply enter your new password twice. Password must be between 8-20 characters long.</p>
+                        <form action="" class="newPassword">
+                            <h5>New Password</h5>
+                            <input type="password" placeholder="New Password" autocapitalize="off" autocomplete="off">
+                            <button>Enter</button>
+                        </form>
+                    </div>  
+                </div>
+            </div>
+        </div>
+    </div>    
+</body>
+</html>
