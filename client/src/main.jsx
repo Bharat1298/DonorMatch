@@ -7,7 +7,11 @@ import {
 import App from "./App";
 import Charity from "./components/Charity";
 import CharityList from "./components/CharityList";
+<<<<<<< HEAD
 import Users from "./components/Users";
+=======
+import UserPage from "./components/User";
+>>>>>>> 2bac3be (Started working on User Page)
 import "./index.css";
 import Index from "./components/Index";
 import Organizations from "./components/Organizations";
@@ -21,6 +25,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
+<<<<<<< HEAD
         element: <Index />,
       },
     ],
@@ -72,6 +77,9 @@ const router = createBrowserRouter([
       {
         path: "/User",
         element: <Users />,
+=======
+        element: <UserPage />,
+>>>>>>> 2bac3be (Started working on User Page)
       },
     ],
   },
@@ -80,7 +88,11 @@ const router = createBrowserRouter([
     element: <App />,
     children: [
       {
+<<<<<<< HEAD
         path: "/list",
+=======
+        path: "/",
+>>>>>>> 2bac3be (Started working on User Page)
         element: <CharityList />,
       },
     ],
