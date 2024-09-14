@@ -1,0 +1,24 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "type": "module",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.0",
+    "express-openid-connect": "^2.17.1",
+    "mongodb": "^6.9.0",
+    "jquery": "^3.7.1",
+    "owl.carousel": "^2.3.4"
+  },
+  "devDependencies": {
+    "@types/node": "^22.5.5"
+  }
+}
