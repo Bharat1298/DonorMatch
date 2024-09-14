@@ -1,11 +1,15 @@
-import { MongoClient } from "mongodb";
+import mongoose from "mongoose";
+
 const connectionString = process.env.ATLAS_URI || "";
-const client = new MongoClient(connectionString);
-let conn;
-try {
-  conn = await client.connect();
-} catch(e) {
-  console.error(e);
-}
-let db = conn.db("sample_training");
-export default db;
+
+const connectDB = async () => {
+  try {
+    await mongoose.connect(connectionString);
+    console.log("Connected to MongoDB Atlas");
+  } catch (err) {
+    console.error("Error connecting to MongoDB Atlas:", err);
+    process.exit(1); // Exit the process with failure
+  }
+};
+
+export default connectDB;

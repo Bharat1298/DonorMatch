@@ -1,11 +1,11 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
 const organizationSchema = new mongoose.Schema({
     name: { type: String, required: true },
     description: { type: String, required: true },
     needs: [{ type: String, required: true }],
     location: { type: String },
-    contactEmail: { type: String, required: true }
+    contactEmail: { type: String, required: true, unique: true, lowercase: true }
 });
 
 const Organization = mongoose.model('Organization', organizationSchema);
