@@ -96,7 +96,7 @@ export default function Charity() {
         location: "",
         description: ""
       });
-      navigate("/");
+      navigate("/list");
     }
   }
 
