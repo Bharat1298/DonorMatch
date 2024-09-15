@@ -1,10 +1,14 @@
 import { useEffect, useState } from "react";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 =======
 import { useParams, useNavigate } from "react-router-dom";
 >>>>>>> 90b15af (Work on user database)
+=======
+import { useNavigate } from "react-router-dom";
+>>>>>>> f0b50ec (push for justin)
 
 export default function User() {
   const [form, setForm] = useState({
@@ -25,31 +29,11 @@ export default function User() {
 
 =======
   const [isNew, setIsNew] = useState(true);
-  const params = useParams();
   const navigate = useNavigate();
 
   useEffect(() => {
-    async function fetchData() {
-      const id = params.id?.toString() || undefined;
-      if (!id) return;
-      setIsNew(false);
-      const response = await fetch(`http://localhost:5050/users/${id}`);
-      if (!response.ok) {
-        const message = `An error has occurred: ${response.statusText}`;
-        console.error(message);
-        return;
-      }
-      const user = await response.json();
-      if (!user) {
-        console.warn(`User with id ${id} not found`);
-        navigate("/");
-        return;
-      }
-      setForm(user);
-    }
-    fetchData();
-    return;
-  }, [params.id, navigate]);
+    // We can remove params.id check and focus on email
+  }, [navigate]);
 
 >>>>>>> 90b15af (Work on user database)
   // Update form state
@@ -62,12 +46,17 @@ export default function User() {
   // Add new skill to the array
   function addSkill() {
 <<<<<<< HEAD
+<<<<<<< HEAD
     if (skillInput.trim()) {
       const updatedSkills = [...form.skills, skillInput.trim()];
 =======
     if (skillInput) {
       const updatedSkills = [...form.skills, skillInput];
 >>>>>>> 90b15af (Work on user database)
+=======
+    if (skillInput.trim()) {
+      const updatedSkills = [...form.skills, skillInput.trim()];
+>>>>>>> f0b50ec (push for justin)
       setForm((prev) => ({ ...prev, skills: updatedSkills }));
       setSkillInput(""); // Clear input field after adding
     }
@@ -76,14 +65,33 @@ export default function User() {
   // Add new interest to the array
   function addInterest() {
 <<<<<<< HEAD
+<<<<<<< HEAD
     if (interestInput.trim()) {
       const updatedInterests = [...form.interests, interestInput.trim()];
 =======
     if (interestInput) {
       const updatedInterests = [...form.interests, interestInput];
 >>>>>>> 90b15af (Work on user database)
+=======
+    if (interestInput.trim()) {
+      const updatedInterests = [...form.interests, interestInput.trim()];
+>>>>>>> f0b50ec (push for justin)
       setForm((prev) => ({ ...prev, interests: updatedInterests }));
       setInterestInput(""); // Clear input field after adding
+    }
+  }
+
+  // Fetch the user by email
+  async function fetchUserByEmail(email) {
+    try {
+      const response = await fetch(`http://localhost:5050/users?email=${email}`);
+      if (!response.ok) {
+        throw new Error(`Error fetching user: ${response.statusText}`);
+      }
+      const users = await response.json();
+      return users.length > 0 ? users[0] : null;
+    } catch (error) {
+      console.error("Fetch user by email error: ", error);
     }
   }
 
@@ -120,31 +128,48 @@ export default function User() {
       setForm({ name: "", email: "", skills: [], interests: [] });
 =======
     const userProfile = { ...form };
+
+    if (!form.email) {
+      alert("Email is required!");
+      return;
+    }
+
     try {
+      const existingUser = await fetchUserByEmail(form.email);
+
       let response;
-      if (isNew) {
-        response = await fetch("http://localhost:5050/users", {
-          method: "POST",
+      if (existingUser) {
+        // If user exists, update their profile
+        setIsNew(false);
+        response = await fetch(`http://localhost:5050/users/${existingUser.id}`, {
+          method: "PATCH",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(userProfile),
         });
       } else {
-        response = await fetch(`http://localhost:5050/users/${params.id}`, {
-          method: "PATCH",
+        // If user doesn't exist, create a new profile
+        response = await fetch("http://localhost:5050/users", {
+          method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(userProfile),
         });
       }
 
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
+        throw new Error(`Failed to save user profile: ${response.status}`);
       }
+
+      console.log("User profile saved successfully.");
+      navigate("/list");
     } catch (error) {
       console.error("Error during form submission: ", error);
     } finally {
       setForm({ name: "", email: "", skills: [], interests: [] });
+<<<<<<< HEAD
       navigate("/list");
 >>>>>>> 90b15af (Work on user database)
+=======
+>>>>>>> f0b50ec (push for justin)
     }
   }
 
@@ -349,4 +374,7 @@ export default function User() {
     </>
   );
 }
+<<<<<<< HEAD
 >>>>>>> 90b15af (Work on user database)
+=======
+>>>>>>> f0b50ec (push for justin)
