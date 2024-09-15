@@ -101,75 +101,109 @@ export default function Charity() {
   }
 
   return (
-    <>
-      <h3 className="text-lg font-semibold p-4">Create/Update Charity Record</h3>
-
-      <div>
-        <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-slate-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md">
-          <input
-            type="text"
-            name="name"
-            id="name"
-            className="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-slate-900 placeholder:text-slate-400 focus:ring-0 sm:text-sm sm:leading-6"
-            placeholder="First Last"
-            value={form.name}
-            onChange={(e) => updateForm({ name: e.target.value })}
-          />
+    <div className="min-h-screen bg-gradient-to-b from-yellow-100 to-orange-200 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-lg w-full space-y-8 bg-white p-10 rounded-xl shadow-xl">
+        <h2 className="text-center text-4xl font-bold text-red-600">
+          Support a Cause
+        </h2>
+        <p className="text-center text-gray-600">
+          Fill out this form to request help or post a donation need.
+        </p>
+        <div className="space-y-6">
+          <div className="rounded-md shadow-sm">
+            {/* Name Input */}
+            <div className="mb-4">
+              <label htmlFor="name" className="block text-sm font-medium text-gray-700">Full Name</label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                required
+                className="appearance-none rounded-md w-full px-3 py-2 border border-gray-300 placeholder-gray-400 text-gray-900 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent sm:text-sm"
+                placeholder="First Last"
+                value={form.name}
+                onChange={(e) => updateForm({ name: e.target.value })}
+              />
+            </div>
+            {/* Email Input */}
+            <div className="mb-4">
+              <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email Address</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                required
+                className="appearance-none rounded-md w-full px-3 py-2 border border-gray-300 placeholder-gray-400 text-gray-900 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent sm:text-sm"
+                placeholder="name@example.com"
+                value={form.email}
+                onChange={(e) => updateForm({ email: e.target.value })}
+              />
+            </div>
+            {/* Needs Input */}
+            <div className="mb-4">
+              <label htmlFor="needs" className="block text-sm font-medium text-gray-700">Items Needed</label>
+              <div className="flex space-x-2">
+                <input
+                  type="text"
+                  name="needs"
+                  id="needs"
+                  required
+                  className="appearance-none rounded-md w-full px-3 py-2 border border-gray-300 placeholder-gray-400 text-gray-900 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent sm:text-sm"
+                  placeholder="e.g., Clothes, Food"
+                  value={inputValue}
+                  onChange={(e) => setInputValue(e.target.value)}
+                />
+                <button
+                  onClick={AddNeed}
+                  className="bg-red-600 text-white px-4 py-2 rounded-md hover:bg-red-700 transition"
+                >
+                  Add
+                </button>
+              </div>
+            </div>
+            {/* Location Input */}
+            <div className="mb-4">
+              <label htmlFor="location" className="block text-sm font-medium text-gray-700">Location</label>
+              <input
+                type="text"
+                name="location"
+                id="location"
+                required
+                className="appearance-none rounded-md w-full px-3 py-2 border border-gray-300 placeholder-gray-400 text-gray-900 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent sm:text-sm"
+                placeholder="e.g., Atlanta"
+                value={form.location}
+                onChange={(e) => updateForm({ location: e.target.value })}
+              />
+            </div>
+            {/* Description Input */}
+            <div className="mb-4">
+              <label htmlFor="description" className="block text-sm font-medium text-gray-700">Charity Description</label>
+              <textarea
+                name="description"
+                id="description"
+                required
+                className="appearance-none rounded-md w-full px-3 py-2 border border-gray-300 placeholder-gray-400 text-gray-900 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent sm:text-sm"
+                placeholder="Tell us more about the charity and its goals"
+                value={form.description}
+                onChange={(e) => updateForm({ description: e.target.value })}
+              />
+            </div>
+          </div>
         </div>
-        <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-slate-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md">
-          <input
-            type="text"
-            email="email"
-            id="email"
-            className="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-slate-900 placeholder:text-slate-400 focus:ring-0 sm:text-sm sm:leading-6"
-            placeholder="@gmail.com"
-            value={form.email}
-            onChange={(e) => updateForm({ email: e.target.value })}
-          />
-        </div>
-        <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-slate-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md">
-          <input
-            type="text"
-            needs="needs"
-            id="needs"
-            className="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-slate-900 placeholder:text-slate-400 focus:ring-0 sm:text-sm sm:leading-6"
-            placeholder="Clothes"
-            value={inputValue} // Use the input value to track the user input
-            onChange={(e) => setInputValue(e.target.value)} // Update the input value
-          />
-          <button onClick={AddNeed}>Add Item</button>
-        </div>
-        <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-slate-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md">
-          <input
-            type="text"
-            location="location"
-            id="location"
-            className="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-slate-900 placeholder:text-slate-400 focus:ring-0 sm:text-sm sm:leading-6"
-            placeholder="Atlanta"
-            value={form.location}
-            onChange={(e) => updateForm({ location: e.target.value })}
-          />
-        </div>
-        <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-slate-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md">
-          <input
-            type="text"
-            description="description"
-            id="description"
-            className="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-slate-900 placeholder:text-slate-400 focus:ring-0 sm:text-sm sm:leading-6"
-            placeholder="Blank Company"
-            value={form.description}
-            onChange={(e) => updateForm({ description: e.target.value })}
-          />
+        {/* Submit Button */}
+        <div className="mt-6">
+          <button
+            type="submit"
+            id="submit"
+            className="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500"
+            onClick={onSubmit}
+          >
+            Save Charity Record
+          </button>
         </div>
       </div>
-
-      <input
-        type="submit"
-        id="submit"
-        value="Save Charity Record"
-        className="inline-flex items-center justify-center whitespace-nowrap text-md font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-slate-100 hover:text-accent-foreground h-9 rounded-md px-3 cursor-pointer mt-4"
-        onClick={onSubmit}
-      />
-    </>
+    </div>
   );
+  
+  
 }
