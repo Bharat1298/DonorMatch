@@ -11,6 +11,10 @@
   },
   "dependencies": {
     "jquery": "npm:jQuery@^1.7.4",
+<<<<<<< HEAD
+=======
+    "jQuery": "^1.7.4",
+>>>>>>> d6480c0 (mackbook)
     "mongodb": "^6.9.0",
     "owl.carousel": "^2.3.4",
     "react": "^18.3.1",
