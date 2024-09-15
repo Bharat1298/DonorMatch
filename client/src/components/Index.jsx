@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Component } from "react"
 import { useNavigate } from "react-router-dom";
 
@@ -77,123 +76,10 @@ export default function Index(){
                       English <i className="ion-chevron-down" />
                     </a>
                     <ul className="dropdown_language">
-=======
-// import { Component } from "react"
-import 'owl.carousel/dist/assets/owl.carousel.css';
-import 'owl.carousel/dist/assets/owl.theme.default.css';
-// import { useEffect } from 'react';
-// import $ from 'jquery';
-import 'owl.carousel/dist/assets/owl.carousel.css';
-import 'owl.carousel/dist/assets/owl.theme.default.css';
-import 'owl.carousel';
-
-export default function Index() {
-  // useEffect(() => {
-  //   // Ensure jQuery is globally available
-  //   window.jQuery = $;
-  //   // Initialize Owl Carousel after the component has been mounted
-  //   $('.owl-carousel').owlCarousel({
-  //     loop: true,
-  //     margin: 10,
-  //     nav: true,
-  //     responsive: {
-  //       0: {
-  //         items: 1,
-  //       },
-  //       600: {
-  //         items: 2,
-  //       },
-  //       1000: {
-  //         items: 3,
-  //       },
-  //     },
-  //   });
-  // }, []);
-
-  return (
-    <>
-      <meta charSet="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link rel="stylesheet" src="styles.css" />
-      <link
-        rel="stylesheet"
-        href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"
-      />
-      <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-      <link
-        rel="stylesheet"
-        href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css"
-      />
-      <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
-      />
-      <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-      />
-      <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
-      />
-      <style
-        dangerouslySetInnerHTML={{
-          __html: `
-            @import url("styles.css");
-            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-            @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap');
-
-            * { box-sizing: border-box; }
-            *, *::after , *::before { box-sizing: border-box; }
-            html,body { height: 100%; }
-            body { line-height: 24px; font-size: 14px; font-style: normal; font-weight: 400; visibility: visible; font-family: 'Poppins', sans-serif; color: #5a5a5a; }
-            h1, h2, h3, h4, h5, h6 { font-weight: 400; margin-top: 0; font-family: "Baloo 2", cursive; }
-            h1 { font-size: 48px; line-height: 1; font-weight: 700; }
-            h2 { font-size: 36px; line-height: 36px; }
-            h3 { font-size: 30px; line-height: 30px; }
-            h4 { font-size: 16px; line-height: 19px; font-weight: 700; }
-            h5 { font-size: 14px; line-height: 18px; }
-            h6 { font-size: 12px; line-height: 14px; }
-            p:last-child { margin-bottom: 0; }
-            a,button { color: inherit; line-height: inherit; text-decoration: none; cursor: pointer; }
-            .btn:focus { box-shadow: none; }
-            a,button,img,input,span { transition: all 0.3s ease 0s; }
-            *:focus { outline: none !important; }
-            a:focus { color: inherit; outline:none; text-decoration: none; }
-            a:hover { text-decoration: none; }
-            button, input[type = "submit"] { cursor:pointer; }
-            img { max-width: 100%; height: auto; color: black; }
-            ul { list-style: outside none none; margin: 0; padding: 0; }
-            nav { display: inline-block; padding: 15px; }
-          `,
-        }}
-      />
-      <div className="home_black_version">
-        <header className="header_area header_black">
-          <div className="header_top">
-            <div className="container">
-              <div className="row align-items-center">
-                <div className="col-lg-6 col-md-6">
-                  <div className="social_icons">
-                    <ul>
->>>>>>> d6480c0 (mackbook)
                       <li>
-                        <a href="#">
-                          <i className="ion-social-facebook" />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i className="ion-social-twitter" />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i className="ion-social-instagram" />
-                        </a>
+                        <a href="#">Spanish</a>
                       </li>
                     </ul>
-<<<<<<< HEAD
                   </li>
                   <nav>
                     <li className="currency">
@@ -229,162 +115,15 @@ export default function Index() {
                       <nav>
                         <li>
                           <a onClick={() => navigate("/create")}href="#">Create Organization</a>
-=======
-                  </div>
-                </div>
-                <div className="col-lg-6 col-md-6">
-                  <div className="top_right text-right">
-                    <ul>
-                      <li className="language">
-                        <a href="#">
-                          English <i className="ion-chevron-down" />
-                        </a>
-                        <ul className="dropdown_language">
-                          <li>
-                            <a href="#">Spanish</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <nav>
-                        <li className="currency">
-                          <a href="organizations.html">Organizations</a>
                         </li>
                       </nav>
-                      <nav>
-                        <li className="currency">
-                          <a href="donate.html">Donate</a>
->>>>>>> d6480c0 (mackbook)
-                        </li>
-                      </nav>
-                      <li className="top_links">
-                        <a href="#">
-                          My Account
-                          <i className="ion-chevron-down" />
-                        </a>
-                        <ul className="dropdown_links">
-                          <nav>
-                            <li>
-                              <a href="#">Checkout</a>
-                            </li>
-                          </nav>
-                          <nav>
-                            <li>
-                              <a href="Account.jsx">Profile</a>
-                            </li>
-                          </nav>
-                          <nav>
-                            <li>
-                              <a href="#">Log In</a>
-                            </li>
-                          </nav>
-                          <nav>
-                            <li>
-                              <a href="Signup.jsx">Sign Up</a>
-                            </li>
-                          </nav>
-                          <nav>
-                            <li>
-                              <a href="#">Create Employee</a>
-                            </li>
-                          </nav>
-                        </ul>
-                      </li>
                     </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="header_middle">
-            <div className="container">
-              <div className="row align-items-center">
-                <div className="col-lg-5">
-                  <div className="home_contact">
-                    <div className="contact_icons">
-                      <img src="icon_phone.png" alt="" />
-                    </div>
-                    <div className="contact_box">
-                      <p>
-                        Inquiry / Helpline :{" "}
-                        <a href="tel:1234567890">123-456-7890</a>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-lg-2 col-md-3 col-4">
-                  <div className="logo">
-                    <a href="index.html">
-                      <img src="logo.png" alt="" />
-                    </a>
-                  </div>
-                </div>
-                <div className="col-lg-5 col-md-7 com-6">
-                  <div className="middle_right"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </header>
-        <div className="slider_area slider_white owl-carousel">
-          <div
-            className="single_slider"
-            style={{ backgroundImage: `url('${"charity.jpeg"}')` }}
-          >
-            <div className="container">
-              <div className="row align-items-center">
-                <div className="col-12">
-                  <div className="slider_content">
-                    <h1>Giving Is Not Just About Just Making A Donation</h1>
-                    <div className="vertical-center">
-                      <a href="#" className="button">
-                        Browse The Organizations
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            className="single_slider"
-            style={{ backgroundImage: `url('${"charity1.png"}')` }}
-          >
-            <div className="container">
-              <div className="row align-items-center">
-                <div className="col-12">
-                  <div className="slider_content">
-                    <h1>It's About Making A Difference</h1>
-                    <div className="vertical-center">
-                      <a href="#" className="button">
-                        Browse The Organizations
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            className="single_slider"
-            style={{ backgroundImage: `url('${"charity3.png"}')` }}
-          >
-            <div className="container">
-              <div className="row align-items-center">
-                <div className="col-12">
-                  <div className="slider_content">
-                    <h1>Making A Huge Impact In Someone's Life</h1>
-                    <div className="vertical-center">
-                      <a href="organizations.html" className="button">
-                        Browse The Organizations
-                      </a>
-                    </div>
-                  </div>
-                </div>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
-<<<<<<< HEAD
       </div>
       {/*header top ends*/}
       {/*header middle starts*/}
@@ -409,66 +148,12 @@ export default function Index() {
                 <a href="index.html">
                   <img src="logo.png" alt="" />
                 </a>
-=======
-        <section className="banner_section banner_black">
-          <div className="container">
-            <div className="row">
-              <h1>Reasons To Donate</h1>
-              <div className="col-lg-4 col-md-6">
-                <div className="single_banner">
-                  <div className="banner_thumb">
-                    <a href="#">
-                      <img src="charity.jpeg" alt="banner1" />
-                    </a>
-                    <h3>Make a Tangible Difference</h3>
-                    <h5>
-                      Donations help fund essential services and programs that
-                      directly benefit individuals and communities in need. Your
-                      contribution can provide food, shelter, medical care,
-                      education, and more, creating a significant and positive
-                      impact on people’s lives.
-                    </h5>
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-4 col-md-6">
-                <div className="single_banner">
-                  <div className="banner_thumb">
-                    <a href="#">
-                      <img src="charity3.png" alt="banner2" />
-                    </a>
-                    <h3>Support a Cause You Believe In</h3>
-                    <h5>
-                      Giving to charity allows you to support causes and
-                      organizations that align with your personal values and
-                      passions. Whether it's combating hunger, advancing medical
-                      research, or promoting environmental conservation, your
-                      donation helps further the mission of organizations you care
-                      about.
-                    </h5>
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-4 col-md-6">
-                <div className="single_banner">
-                  <div className="banner_thumb">
-                    <a href="#">
-                      <img src="charity2.png" alt="banner3" />
-                    </a>
-                    <h3>Create Positive Change</h3>
-                    <h5>
-                      Donations contribute to broader societal improvements and
-                      advancements. By supporting charities, you help drive
-                      initiatives that address systemic issues, improve quality of
-                      life, and work towards solutions for global challenges.
-                    </h5>
-                  </div>
-                </div>
->>>>>>> d6480c0 (mackbook)
               </div>
             </div>
+            <div className="col-lg-5 col-md-7 com-6">
+              <div className="middle_right"></div>
+            </div>
           </div>
-<<<<<<< HEAD
         </div>
       </div>
       {/*header middle ends*/}
@@ -482,34 +167,12 @@ export default function Index() {
                   <a href="#">
                     <img src="logo.png" alt="logo" />
                   </a>
-=======
-        </section>
-        <div className="footer_area footer_black">
-          <div className="container">
-            <div className="row mt-5">
-              <div className="col-12">
-                <div className="footer_content">
-                  <h2>Subscribe to Our Newsletter</h2>
-                  <p>Get E-mail of all the updates</p>
-                  <div className="subscribe_form">
-                    <form action="" className="footer-newsletter">
-                      <input
-                        type="email"
-                        placeholder="Email address ..."
-                        autoCapitalize="off"
-                        autoComplete="off"
-                      />
-                      <button>Subscribe</button>
-                    </form>
-                  </div>
->>>>>>> d6480c0 (mackbook)
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-<<<<<<< HEAD
       {/*header bottom ends*/}
     </header>
     {/*Slider Section Starts*/}
@@ -652,8 +315,4 @@ export default function Index() {
   </div>
 </>
     );
-=======
-    </>
-  );
->>>>>>> d6480c0 (mackbook)
 }
